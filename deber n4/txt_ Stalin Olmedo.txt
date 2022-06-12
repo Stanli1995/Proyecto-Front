@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Title>Document</Title>
+    <link href="style.css" rel="stylesheet">
+    <script src="INDEX.JS"></script>
+</head>
+
+<body>
+   
+    <div class="container">
+        <form id="form_register" action="https://www.youtube.com/" method="get">
+            <h2 class="container_title">Formulario</h2>
+            <div id="name_container" class="input_container">
+                <label for="input_name">Nombre:</label>
+                <input type="text" name="name" id="input_name" class="input" placeholder="Nombre:">
+                <p class="input_error"></p>
+            </div>
+        
+
+       
+                <div id="last_name_container" class="input_container">
+                <label for="input_name">Apellido:</label>
+                <input type="text" name="last_name" id="input_last_name" class="input" placeholder="Nombre:">
+                <p class="input_error"></p>
+                </div>
+    
+
+    
+                <div id="user_name_container" class="input_container">
+                    <label for="input_name">Usuario:</label>
+                    <input type="text" name="user_name" id="input_user_name" class="input" placeholder="Nombre:">
+                    <p class="input_error"></p>
+                </div>
+
+
+
+                <div id="_cedula_name_container" class="input_container">
+                <label for="input_name">Cedula:</label>
+                <input type="text" name="cedula_name" id="input_cedula_name" class="input" placeholder="Nombre:">
+                <p class="input_error"></p>
+                </div>
+
+
+
+                <div id="email_container" class="input_container">
+                    <label for="input_name">Email:</label>
+                    <input type="text" name="email" id="input_email" class="input" placeholder="Email:" autocomplete="off">
+                    <p class="input_error"></p>
+                </div>
+
+            <div class="input_container">
+                <button type="submit" class="button">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+
+
+     
+
+
+</body>
+</html>
+
+
+
+Body {
+    margin: 0px;
+}
+* {
+    box-sizing: border-box;
+
+}
+.container{
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    height: 500;
+    border: 1px solid #cbcbcb;
+    margin: auto;
+    margin: 50px;
+}
+
+.container_title {
+    text-align: center;
+}
+.input_container {
+max-width: 300px;
+margin: 0 auto;
+}
+
+.input_container label {
+    display: block;
+}
+
+.input_container .input{
+    width: 100%;
+    border: 1px solid #cbcbcb;
+    padding: 0px;
+}
+
+.input_container .input_error{
+    color: red;
+    margin: 0px;
+
+}
+
+.button {
+    background-color: yellow;
+    color: black;
+    border-radius: 6px;
+    padding: 5px;
+
+}
+
+
+
+window.addEventListener('DOMContentLoaded', function(event)) {
+var form_register = this.document.querySelector('#form_register');
+form_register.addEventListener('submit', function(event)){
+
+
+}
+    var canSubmit = true;
+    var input_name = document.querySelector('#input_name');
+    console.log(input_name);
+    if (input_name.value == ""){
+        document.querySelector('#name_container .input_error').innerHTML ='El Nombre es Obligatorio';
+        canSubmit = false;
+    } else {
+        document.querySelector('#name_container .input_error').innerHTML = '';
+    }
+
+
+    var input_last_name = document.querySelector('#input_last_name');
+    
+    if (input_last_name.value == ""){
+        document.querySelector('#last_name_container .input_error').innerHTML ='El Apellido es Obligatorio';
+        canSubmit = false;
+    } else {
+        document.querySelector('#last_name_container .input_error').innerHTML = '';
+    }
+
+
+    var input_user_name = document.querySelector('#input_user_name');
+    
+    if (input_user_name.value == ""){
+        document.querySelector('#user_name_container .input_error').innerHTML ='El Usuario es Obligatorio';
+        canSubmit = false;
+    } else {
+        document.querySelector('#user_name_container .input_error').innerHTML = '';
+    }
+
+    var input_name = document.querySelector('#input_name');
+    console.log(input_name);
+    if (input_name.value == ""){
+        document.querySelector('#name_container .input_error').innerHTML ='El Nombre es Obligatorio';
+        canSubmit = false;
+    } else {
+        document.querySelector('#name_container .input_error').innerHTML = '';
+    }
+
+    var input_email = document.querySelector('#input_email');
+    
+    if (input_email.value == ""){
+        document.querySelector('#email_container .input_error').innerHTML ='El Correo Electronico es Obligatorio';
+        canSubmit = false;
+        } else {
+            var indexOne = input_email.value.indexOF("@");
+            var indexTwo = input_email.value.indexOF(".");
+            if (indexOne < o || indexTwo < 0 ){
+                Document.querySelector('#email_container .input_error').innerHTML = 'Error el escribir el Correo Electronico'
+                canSubmit =folse; 
+            } else {
+                document.querySelector('#email_container .input_error').innerHTML = '';
+            }
+
+    
+}
+
+if (!canSubmit){
+    event.preventDefault();
+}
+}
+}
+
+
+ <input type="text" pattern="[A-Za-z]{}" title="ingrese su Nombre">
+
+    <input type="text" pattern="[A-Za-z]{}" title="ingrese su Apellido">
+          
+
+           <input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="ingrese su Usuario Minimo 8 Caracteres: Ej JuanMetralla123456">

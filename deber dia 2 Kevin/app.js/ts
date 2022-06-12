@@ -1,0 +1,36 @@
+
+ let raza : string = "zyx"
+
+
+
+ let raza2 = 14253
+raza2 = 12564
+
+
+
+
+
+let isNumber : Boolean = false
+
+
+
+let List: [String, number ]
+ 
+List = [Hola, 1995]
+
+enum Color {
+    red=10 
+}
+
+
+
+
+let minutos: = string | Boolean
+minutos = 30;
+minutos = '60'; 
+
+
+
+type IdUser = string | number 
+
+let IdUser : IdUser = false 

@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <style>
+        body{
+            margin: 0px;
+
+        } *
+        {
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: white;
+            height: 500px;
+            border: 1px solid rgb(218, 218, 218);
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .container__tittle{
+            text-align: center;
+        }
+        .input_container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .input_container label {
+            display: block;
+        }
+        .input_container .input{
+            width: 100%;
+            border: 1px solid rgb(218, 218, 218);
+            padding: 10px;
+        }
+        .input_container .input-error{
+            color: red;
+            margin: 0px;
+        }
+        .button {
+            background-color: yellow;
+            color:rgb(39, 38, 38);
+            border-radius: 6px;
+            padding: 6px;
+        }
+    </style>
+
+<div class="container">
+    <form id="form-register" action="https://www.youtube.com/watch?v=DEeZ-MPgirI" method="get">
+        <h2 class="container__tittle">Formulario</h2>
+
+
+        <div id="name_container" class="input_container">
+            <label for="input_name">Nombre: </label>
+            <input type="text" name="name" id="input_name" class="input" placeholder="Nombre: "/>
+            <p class="input-error"></p>
+        </div>
+        <br>
+        <div id="last_name_container" class="input_container">
+            <label for="input_name">Apellido: </label>
+            
+            <input type="text" name="last-name" id="input_last_name" class="input" placeholder="Apellido: "/>
+          
+            <p class="input-error"></p>
+        </div>
+        <br>
+        <div id="last_name_container" class="input_container">
+            <label for="input_name">Usuario: </label>
+            <input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="ingrese su Usuario Minimo 8 Caracteres: Ej JuanMetralla123456">
+          
+            <p class="input-error"></p>
+        </div>
+        <br>
+        <div id="cedula_container" class="input_container">
+            <label for="input_name">Cédula: </label>
+            <input type="text" pattern="[1-9]\d{3}\d{6}" required title="Tiene que ingresar solo Numeros: EJ 1723151418 "   >
+            <p class="input-error"></p>
+        </div>
+        <br>
+        <div id="email_container" class="input_container">
+            <label for="input_name">Email: </label>
+            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Debe ser un Correo Electronico Correcto ">
+           
+            <p class="input-error"></p>
+        </div>
+        <br>
+        <div class="input_container">
+            <button type="submit" class="button"  >Enviar</button>
+        </div>
+    </form>
+</div>
+</body>                                   
+</html>
