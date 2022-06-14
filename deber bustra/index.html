@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personajes Marvel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+  <body>
+    <div class="container m-auto content">
+        <div class="container p-0 mt-5 title">
+            <h2>Listado de personajes</h2>
+        </div>
+        <div class="row pt-2 pb-2">
+            <div class="col-md-10">
+            </div>
+            <div class="col-md-2">
+                <button type="button" id="add-character" class="btn btn-danger"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>Nuevo
+                </button>
+            </div>
+        </div>
+        <div id="new-character" class="new-character p-5 mt-4 mb-4" style="display: none">
+            <form class="row needs-validation">
+                <div class="header-form mb-3">
+                    <h2>Nuevo Personaje</h2>
+                </div>
+                <div class="content-form">
+                    <div class="mb-3 row">
+                        <label for="nameCharacter" class="col-3 form-label">Nombre:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control nameCharacter" id="nameCharacter" placeholder="Nombre" required>
+                            <div class="invalid-feedback">
+                                El campo es Obligatorio.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="descriptionCharacter" class="col-3 col-form-label">Descripcion:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control descriptionCharacter" id="descriptionCharacter" placeholder="Descripcion" required>
+                            <div class="invalid-feedback">
+                                El campo es Obligatorio.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="imageCharacter" class="col-3 col-form-label">imagen:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control descriptionCharacter" id="imageCharacter" placeholder="URL" required>
+                            <div class="invalid-feedback">
+                                El campo es Obligatorio.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-center button-form">
+                    <button id="save-form" type="submit" class="btn btn-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"/>
+                            <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                        </svg>
+                        Guardar
+                    </button>
+                    <button id="hide-form" type="button" class="btn btn-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="container-list">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
